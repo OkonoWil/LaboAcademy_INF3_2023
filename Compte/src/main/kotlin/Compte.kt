@@ -1,4 +1,4 @@
-class Compte(num:Int, solde:Int, plancher:Int) {
+open class Compte(num:Int, solde:Int, plancher:Int) {
     private var num: Int = num
     private var solde: Int = solde
     private var plancher: Int = plancher
