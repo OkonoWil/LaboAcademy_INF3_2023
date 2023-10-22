@@ -8,8 +8,8 @@ class CompteCourant(num:Int, solde:Int, plancher:Int, private var tauxAgios: Dou
     fun afficher(): Unit {
         println("""
             Compte Courant
-            Solde: ${this.consulterSolde()}
-            Agios: ${this.calculAgios()}
+                Solde: ${this.consulterSolde()}
+                Agios: ${this.calculAgios()}
         """.trimIndent())
     }
 }
