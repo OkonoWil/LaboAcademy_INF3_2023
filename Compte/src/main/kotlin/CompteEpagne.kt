@@ -9,7 +9,7 @@ class CompteEpagne(num:Int, solde:Int, plancher:Int, private var tauxInteret: Do
         println("""
             Compte Epagne
                 Solde: ${this.consulterSolde()}
-                Agios: ${this.calculInteret()}
+                Intérêt: ${this.calculInteret()}
         """.trimIndent())
     }
 }
