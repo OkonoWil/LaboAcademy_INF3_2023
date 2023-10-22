@@ -38,25 +38,35 @@ class Rationnal(num:Int, denom:Int) {
         result.normaliser()
         return result
     }
+    
+    companion object{
+        fun plusPetitRationnal(table: List<Rationnal>): Rationnal {
+            var result = table[0]
+            for (c in table){
+                if(result.num/result.denom.toDouble() > c.num/c.denom.toDouble()){
+                    result = c
+                }
+            }
+            return result
+        }
+    }
     fun div(r: Rationnal): Rationnal {
         return this.mult(Rationnal(r.denom,r.num))
     }
-    override fun toString():String{
+   /* override fun toString():String{
         return "$num/$denom"
-    }
+    }*/
 
 }
 
 fun main() {
     val r1:Rationnal = Rationnal(3,4)
     val r2:Rationnal = Rationnal(1,8)
+    println(r1)
     println("R1 = ${r1.toString()}")
     println("R2 = ${r2.toString()}")
     println("R1 + R2 = ${r1.add(r2)}")
     println("R1 * R2 = ${r1.mult(r2)}")
-
 }
 
-fun plusPetitRationnal(table: List<Rationnal>): Rationnal {
-    return Rationnal(4)
-}
+
